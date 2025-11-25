@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+server:
+  port: 8080
+
+jwt:
+  secret: "ZmFrzZmkvZWF6aWtvc2hlbWZrYWZrzZmkvZWF6aWtvczhlbWZrYWZrzZmkvZWF6aWtvc2hlbWZrYQ=="
+  expiration: 86400000
+
+logging:
+  level:
+    com.qissa: DEBUG
+    org.springframework.security: DEBUG
